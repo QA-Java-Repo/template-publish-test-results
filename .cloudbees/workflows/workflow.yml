@@ -144,23 +144,4 @@ jobs:
           s3-path: s3-folder/${{ cloudbees.run_id }}.tar.gz
           send-artifact-info: "true"
 
-  # trigger-tosca-action:
-  #   steps:
-  #     - name: Trigger tosca actions test
-  #       uses: calculi-corp/template-external-actions@tosca-actions
-  #       with:
-  #         tosca_cloud_base_url: "https://dk-company5.my.tricentis.com/"
-  #         tosca_auth_url: "https://dk-company5-559.okta.com/oauth2/default/v1/token"
-  #         client_id: ${{ secrets.TOSCA_CLIENT_ID }}
-  #         client_secret: ${{ secrets.TOSCA_CLIENT_SECRET }}
-  #         playlist_name: "sample playlist2"
-  #         workspace: "default"
-  #         filename: ${{ cloudbees.run_id }}
-      
-  #     - name: Publish Tosca Cloud Test results
-  #       uses: calculi-corp/template-external-actions/publish@tosca-actions
-  #       with:
-  #         test-type: tosca
-  #         folder-name: /cloudbees/home/tosca-cloud/${{ cloudbees.run_id }}.json  
-
   
