@@ -104,7 +104,7 @@ jobs:
         uses: cloudbees-io/checkout@v1
       
       - name: Jest-Test
-        uses: cloudbees-io/publish-test-results@v1
+        uses: cloudbees-io/publish-test-results@CBP-8935
         with:
           test-type: jest
           folder-name: ${{ cloudbees.workspace }}/test_data/jest/nextgen-ui/jest-results.json
@@ -120,3 +120,4 @@ jobs:
         with:
           test-type: playwright
           folder-name: ${{ cloudbees.workspace }}/test_data/playwright/results_failed.json
+
